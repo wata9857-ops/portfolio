@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuke Doyo Photography Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <!-- ヒーローセクション -->
+    <header class="relative w-full h-screen flex flex-col justify-between items-center bg-black">
+        <!-- 背景画像 (Cloudinary: 軽量化＋自動フォーマット適用) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://res.cloudinary.com/demo/image/upload/w_1920,q_auto,f_auto/v1614316972/sample.jpg" 
+                 alt="Hero Background" 
+                 class="w-full h-full object-cover opacity-70">
+        </div>
+        
+        <div class="z-10 mt-8">
+            <h1 class="text-white text-sm tracking-[0.3em] uppercase">Yusuke Doyo Photography</h1>
+        </div>
+
+        <div class="z-10 flex flex-col items-center mb-12">
+            <h2 class="text-white text-4xl md:text-6xl font-light tracking-wider mb-8 text-center leading-tight">
+                Engineering <br><span class="italic text-gray-300">meets</span> Aesthetics
+            </h2>
+            <!-- ミニマルなナビゲーション -->
+            <nav class="flex space-x-8 text-white text-sm tracking-widest">
+                <a href="#gallery" class="hover:text-gray-400 transition-colors">Gallery</a>
+                <a href="#profile" class="hover:text-gray-400 transition-colors">Profile</a>
+                <a href="#contact" class="hover:text-gray-400 transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ギャラリーセクション -->
+    <section id="gallery" class="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-light tracking-widest text-center mb-16 uppercase">Selected Works</h2>
+        
+        <!-- PhotoSwipe ギャラリーコンテナ -->
+        <div class="pswp-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="my-gallery">
+            
+            <!-- 写真 1: 走行区間表記（単方向） -->
+            <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
+               data-pswp-width="2500" 
+               data-pswp-height="1666" 
+               class="block overflow-hidden group aspect-[3/2]" 
+               data-cropped="true"
+               data-caption="JR西日本 225系 - 走行区間: 大阪→京都">
+                <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" 
+                     alt="Photo 1" 
+                     loading="lazy" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </a>
+
+            <!-- 写真 2: 走行区間表記（往復） -->
+            <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
+               data-pswp-width="2500" 
+               data-pswp-height="1666" 
+               class="block overflow-hidden group aspect-[3/2]" 
+               data-caption="トワイライトエクスプレス瑞風 - 走行区間: 大阪⇄下関">
+                <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" 
+                     alt="Photo 2" 
+                     loading="lazy" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </a>
+
+            <!-- 写真 3: 1文字駅名の特殊表記 -->
+            <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
+               data-pswp-width="2500" 
+               data-pswp-height="1666" 
+               class="block overflow-hidden group aspect-[3/2]" 
+               data-caption="関西本線 - 撮影地: 　関　">
+                <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" 
+                     alt="Photo 3" 
+                     loading="lazy" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </a>
+            
+            <!-- 追加の写真（レイアウトデモ用） -->
+             <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
+               data-pswp-width="2500" 
+               data-pswp-height="1666" 
+               class="block overflow-hidden group aspect-[3/2]">
+                <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" 
+                     alt="Photo 4" 
+                     loading="lazy" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </a>
+        </div>
+    </section>
+
+    <!-- プロフィールセクション -->
+    <section id="profile" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-2xl font-light tracking-widest mb-12 uppercase">Profile</h2>
+            <div class="space-y-6 text-gray-600 leading-relaxed font-light">
+                <p>
+                    大阪を拠点に活動するフォトグラファー。
+                </p>
+                <p>
+                    大阪大学工学部（機械工学）で培った数理的・論理的なアプローチをベースに、<br class="hidden md:block">
+                    光の演算と構図の最適化を図り、被写体の持つ真のディテールを引き出します。
+                </p>
+                <p class="text-sm mt-8 border-t border-gray-200 pt-8 inline-block">
+                    <span class="block mb-2 text-gray-400 tracking-wider">GEAR</span>
+                    Canon EOS R6 Mark II / RF 24-70mm F2.8 / Adobe Lightroom
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- コンタクト & SNSセクション -->
+    <section id="contact" class="py-32 bg-gray-900 text-center">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-2xl font-light tracking-widest text-white mb-12 uppercase">Contact</h2>
+            <p class="text-gray-400 mb-10 font-light">
+                撮影のご依頼、作品に関するお問い合わせは以下よりお願いいたします。
+            </p>
+            <div class="flex flex-col items-center space-y-6">
+                <!-- メインのアクション: Instagram -->
+                <a href="https://instagram.com/your_account" target="_blank" rel="noopener noreferrer" 
+                   class="inline-block bg-white text-black px-10 py-4 text-sm tracking-widest hover:bg-gray-200 transition-colors">
+                    FOLLOW ON INSTAGRAM
+                </a>
+                <!-- サブアクション: メール -->
+                <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-white transition-colors text-sm tracking-widest">
+                    your.email@example.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 text-center">
+        <p class="text-gray-600 text-xs tracking-widest">&copy; 2026 Yusuke Doyo. All rights reserved.</p>
+    </footer>
+
+    <!-- JS モジュール読み込み -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
