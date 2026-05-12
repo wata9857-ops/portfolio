@@ -10,28 +10,45 @@
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
-    <header class="relative w-full h-screen flex flex-col justify-between items-center bg-black">
+    <header class="relative w-full bg-[#050505] flex flex-col items-center justify-center overflow-hidden aspect-[16/9] min-h-[300px]">
         
         <div class="absolute inset-0 z-0">
-            <img src="https://res.cloudinary.com/demo/image/upload/w_1920,q_auto,f_auto/v1614316972/sample.jpg" 
-                 alt="Hero Background" 
-                 class="w-full h-full object-cover opacity-70">
-        </div>
-        
-        <div class="z-10 mt-8">
-            <h1 class="text-white text-sm tracking-[0.3em] uppercase">Yusuke Doyo Photography</h1>
+            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778483663/0T0A0951_btiyr7.jpg" 
+                 alt="Header Background" 
+                 class="w-full h-full object-cover"> 
         </div>
 
-        <div class="z-10 flex flex-col items-center mb-12">
-            <h2 class="text-white text-4xl md:text-6xl font-light tracking-wider mb-8 text-center leading-tight">
-                Engineering <br><span class="italic text-gray-300">meets</span> Aesthetics
-            </h2>
+        <div class="absolute inset-0 z-10 opacity-[0.015]" style="background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18vw] font-sans font-black uppercase text-transparent tracking-widest pointer-events-none [-webkit-text-stroke:2px_white] md:[-webkit-text-stroke:3px_white] z-10 select-none whitespace-nowrap">
+            GALLERY
+        </div>
+
+        <div class="z-20 flex flex-col items-center w-full px-4 relative py-10 md:py-14 h-full justify-between">
             
-            <nav class="flex space-x-8 text-white text-sm tracking-widest">
-                <a href="#gallery" class="hover:text-gray-400 transition-colors">Gallery</a>
-                <a href="#profile" class="hover:text-gray-400 transition-colors">Profile</a>
-                <a href="#contact" class="hover:text-gray-400 transition-colors">Contact</a>
+            <div class="flex items-center gap-6">
+                <span class="w-8 h-px bg-gray-400/50"></span>
+                <h1 class="text-gray-200 text-[10px] md:text-xs tracking-[0.5em] uppercase font-light drop-shadow-md">
+                    Yusuke Doyo Photography
+                </h1>
+                <span class="w-8 h-px bg-gray-400/50"></span>
+            </div>
+
+            <div class="flex-grow"></div> <nav class="flex space-x-12 md:space-x-16 text-gray-200 text-xs tracking-[0.2em] uppercase font-light drop-shadow-md">
+                <a href="#gallery" class="hover:text-white transition-colors duration-500 relative group pb-2">
+                    Gallery
+                    <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="#profile" class="hover:text-white transition-colors duration-500 relative group pb-2">
+                    Profile
+                    <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="hover:text-white transition-colors duration-500 relative group pb-2">
+                    Contact
+                    <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-full"></span>
+                </a>
             </nav>
+
         </div>
     </header>
 
@@ -41,12 +58,12 @@
         
         <div class="pswp-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="my-gallery">
             
-            <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
+            <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778483663/0T0A0951_btiyr7.jpg" 
                data-pswp-width="2500" 
                data-pswp-height="1666" 
                class="block overflow-hidden group aspect-[3/2]" 
                data-caption="JR西日本 225系 - 走行区間: 大阪→京都">
-                <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" 
+                <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778483663/0T0A0951_btiyr7.jpg" 
                      alt="Photo 1" 
                      loading="lazy" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
