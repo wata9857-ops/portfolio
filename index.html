@@ -6,6 +6,9 @@
     <title>Yusuke Doyo Photography Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
@@ -55,162 +58,125 @@
 
     <section id="gallery" class="py-32 bg-[#efefef] relative overflow-hidden group">
         
-        <style>
-            .hide-scrollbar::-webkit-scrollbar { display: none; }
-            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        </style>
-
         <div class="mb-24 text-center relative z-20">
             <h2 class="text-3xl font-serif tracking-[0.4em] text-gray-800 uppercase">Selected Works</h2>
             <p class="text-xs text-gray-500 tracking-widest mt-4 font-light">EXHIBITION 2026</p>
         </div>
 
-        <div class="relative w-full flex items-center py-10">
-            
-            <div class="absolute left-4 md:left-12 z-20 text-gray-400 opacity-30 transition-opacity duration-700 pointer-events-none">
-                <svg class="w-8 h-8 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="0.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </div>
-
-            <div class="absolute right-4 md:right-12 z-20 text-gray-400 opacity-30 transition-opacity duration-700 pointer-events-none">
-                <svg class="w-8 h-8 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="0.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </div>
-
-            <div class="absolute top-0 left-0 w-16 md:w-48 h-full bg-gradient-to-r from-[#efefef] to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute top-0 right-0 w-16 md:w-48 h-full bg-gradient-to-l from-[#efefef] to-transparent z-10 pointer-events-none"></div>
-
-            <div class="pswp-gallery flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth w-full px-[10vw] md:px-[30vw] gap-32 md:gap-64 items-center" id="my-gallery">
+        <div class="swiper mySwiper w-full py-10 pswp-gallery" id="my-gallery">
+            <div class="swiper-wrapper items-center">
                 
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto:best,f_auto/v1778564997/0T0A0395_t6ihy0.jpg" 
-                       data-pswp-width="6000" data-pswp-height="4000" 
-                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
-                        
-                        <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564997/0T0A0395_t6ihy0.jpg" 
-                                 alt="Horizontal Photo" loading="lazy" 
-                                 class="h-[280px] md:h-[400px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
-                        </div>
-                    </a>
-                </div>
-
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
-                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
                     <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564996/0T0A1769_avxrrq.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
                        class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
-                        
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
                             <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564996/0T0A1769_avxrrq.jpg" 
-                                 alt="Vertical Photo" loading="lazy" 
+                                 loading="lazy" alt="Gallery Photo 1"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
                     </a>
                 </div>
 
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564795/0T0A1796_wmz713.jpg" 
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564795/0T0A1796_wmz713.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
-                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]"
-                       data-caption="【ここに写真のタイトルや説明を入力】">
-                        
+                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564795/0T0A1796_wmz713.jpg" 
-                                 alt="【写真の簡単な説明】" loading="lazy" 
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564795/0T0A1796_wmz713.jpg" 
+                                 loading="lazy" alt="Gallery Photo 2"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
                     </a>
                 </div>
 
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564794/0T0A1629_kbzytg.jpg" 
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564794/0T0A1629_kbzytg.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
-                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]"
-                       data-caption="【ここに写真のタイトルや説明を入力】">
-                        
+                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564794/0T0A1629_kbzytg.jpg" 
-                                 alt="【写真の簡単な説明】" loading="lazy" 
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564794/0T0A1629_kbzytg.jpg" 
+                                 loading="lazy" alt="Gallery Photo 3"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
                     </a>
                 </div>
 
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564794/0T0A0981_bb57qu.jpg" 
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564794/0T0A0981_bb57qu.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
-                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]"
-                       data-caption="【ここに写真のタイトルや説明を入力】">
-                        
+                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564794/0T0A0981_bb57qu.jpg" 
-                                 alt="【写真の簡単な説明】" loading="lazy" 
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564794/0T0A0981_bb57qu.jpg" 
+                                 loading="lazy" alt="Gallery Photo 4"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
                     </a>
                 </div>
 
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564792/0T0A0575_ukmuue.jpg" 
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564792/0T0A0575_ukmuue.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
-                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]"
-                       data-caption="【ここに写真のタイトルや説明を入力】">
-                        
+                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564792/0T0A0575_ukmuue.jpg" 
-                                 alt="【写真の簡単な説明】" loading="lazy" 
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564792/0T0A0575_ukmuue.jpg" 
+                                 loading="lazy" alt="Gallery Photo 5"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
                     </a>
                 </div>
 
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564794/0T0A1257_wu8ayb.jpg" 
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564794/0T0A1257_wu8ayb.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
-                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]"
-                       data-caption="【ここに写真のタイトルや説明を入力】">
-                        
+                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564794/0T0A1257_wu8ayb.jpg" 
-                                 alt="【写真の簡単な説明】" loading="lazy" 
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564794/0T0A1257_wu8ayb.jpg" 
+                                 loading="lazy" alt="Gallery Photo 6"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
                     </a>
                 </div>
 
-                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564746/0T0A1750_xeut2y.jpg" 
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564746/0T0A1750_xeut2y.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
-                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]"
-                       data-caption="【ここに写真のタイトルや説明を入力】">
-                        
+                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778564746/0T0A1750_xeut2y.jpg" 
-                                 alt="【写真の簡単な説明】" loading="lazy" 
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564746/0T0A1750_xeut2y.jpg" 
+                                 loading="lazy" alt="Gallery Photo 7"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide !w-auto flex flex-col items-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto:best,f_auto/v1778564997/0T0A0395_t6ihy0.jpg" 
+                       data-pswp-width="6000" data-pswp-height="4000" 
+                       class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
+                        <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_800,q_auto:best,f_auto/v1778564997/0T0A0395_t6ihy0.jpg" 
+                                 loading="lazy" alt="Gallery Photo 8"
+                                 class="h-[220px] md:h-[400px] max-w-[75vw] md:max-w-none w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
                     </a>
                 </div>
 
             </div>
+
+            <div class="absolute top-1/2 -translate-y-1/2 -left-16 w-32 h-48 bg-[#efefef] blur-[25px] z-20 pointer-events-none rounded-full"></div>
+            <div class="absolute top-1/2 -translate-y-1/2 -right-16 w-32 h-48 bg-[#efefef] blur-[25px] z-20 pointer-events-none rounded-full"></div>
+
+            <div class="swiper-button-prev !text-gray-400 opacity-40 hover:opacity-100 transition-opacity scale-50 md:scale-75 !left-0 md:!left-6 z-30"></div>
+            <div class="swiper-button-next !text-gray-400 opacity-40 hover:opacity-100 transition-opacity scale-50 md:scale-75 !right-0 md:!right-6 z-30"></div>
         </div>
     </section>
 
@@ -318,6 +284,38 @@
         <p class="text-gray-600 text-xs tracking-widest">&copy; 2026 Yusuke Doyo. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            loopedSlides: 8,
+            grabCursor: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 60,
+            speed: 700,
+            // ↓ 追加：画像読み込み完了後にスライダーの横幅を強制的に再計算させる
+            on: {
+                init: function () {
+                    const swiperInstance = this;
+                    window.addEventListener('load', function() {
+                        swiperInstance.update();
+                    });
+                    // 念のための保険（0.8秒後にもう一度計算）
+                    setTimeout(function() { swiperInstance.update(); }, 800);
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    spaceBetween: 160,
+                }
+            }
+        });
+    </script>
     <script type="module" src="script.js"></script>
 </body>
 </html>
