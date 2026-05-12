@@ -53,33 +53,114 @@
     </header>
 
 
-    <section id="gallery" class="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <h2 class="text-2xl font-light tracking-widest text-center mb-16 uppercase">Selected Works</h2>
+    <section id="gallery" class="py-32 bg-[#efefef] relative overflow-hidden group">
         
-        <div class="pswp-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="my-gallery">
+        <style>
+            .hide-scrollbar::-webkit-scrollbar { display: none; }
+            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        </style>
+
+        <div class="mb-24 text-center relative z-20">
+            <h2 class="text-3xl font-serif tracking-[0.4em] text-gray-800 uppercase">Selected Works</h2>
+            <p class="text-xs text-gray-500 tracking-widest mt-4 font-light">EXHIBITION 2026</p>
+        </div>
+
+        <div class="relative w-full flex items-center py-10">
             
-            <a href="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778483663/0T0A0951_btiyr7.jpg" 
-               data-pswp-width="2500" 
-               data-pswp-height="1666" 
-               class="block overflow-hidden group aspect-[3/2]" 
-               data-caption="JR西日本 225系 - 走行区間: 大阪→京都">
-                <img src="https://res.cloudinary.com/dshdwliwm/image/upload/w_1920,q_auto,f_auto/v1778483663/0T0A0951_btiyr7.jpg" 
-                     alt="Photo 1" 
-                     loading="lazy" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            </a>
-            <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
-               data-pswp-width="2500" data-pswp-height="1666" class="block overflow-hidden group aspect-[3/2]" 
-               data-caption="トワイライトエクスプレス瑞風 - 走行区間: 大阪⇄下関">
-                <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            </a>
+            <div class="absolute left-4 md:left-12 z-20 text-gray-400 opacity-30 transition-opacity duration-700 pointer-events-none">
+                <svg class="w-8 h-8 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="0.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </div>
 
-            <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
-               data-pswp-width="2500" data-pswp-height="1666" class="block overflow-hidden group aspect-[3/2]" 
-               data-caption="関西本線 - 撮影地: 　関　">
-                <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 3" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            </a>
+            <div class="absolute right-4 md:right-12 z-20 text-gray-400 opacity-30 transition-opacity duration-700 pointer-events-none">
+                <svg class="w-8 h-8 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="0.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
 
+            <div class="absolute top-0 left-0 w-16 md:w-48 h-full bg-gradient-to-r from-[#efefef] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 w-16 md:w-48 h-full bg-gradient-to-l from-[#efefef] to-transparent z-10 pointer-events-none"></div>
+
+            <div class="pswp-gallery flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth w-full px-[10vw] md:px-[30vw] gap-16 md:gap-32 items-center" id="my-gallery">
+                
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" 
+                       data-pswp-width="2500" data-pswp-height="1666" 
+                       class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block"
+                       data-caption="JR西日本 225系 - 走行区間: 大阪→京都">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 1" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/c_crop,h_2500,w_1666/v1614316972/sample.jpg" 
+                       data-pswp-width="1666" data-pswp-height="2500" 
+                       class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block"
+                       data-caption="縦構図の作品サンプル">
+                        <img src="https://res.cloudinary.com/demo/image/upload/c_fill,h_600,w_400,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 2" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 3" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 4" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 5" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 6" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 7" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 8" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 9" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+                <div class="relative shrink-0 flex flex-col items-center snap-center">
+                    <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
+                    <a href="https://res.cloudinary.com/demo/image/upload/v1614316972/sample.jpg" data-pswp-width="2500" data-pswp-height="1666" class="relative z-10 bg-[#fdfdfd] p-4 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-200 transition-transform duration-500 hover:scale-[1.03] block">
+                        <img src="https://res.cloudinary.com/demo/image/upload/w_600,q_auto,f_auto/v1614316972/sample.jpg" alt="Photo 10" loading="lazy" class="h-[250px] md:h-[350px] w-auto object-contain border border-[#1a1a1a]">
+                    </a>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -172,6 +253,13 @@
                     <span>INSTAGRAM</span>
                 </a>
 
+                <a href="mailto:wata9856@gmail.com" 
+                   class="flex items-center justify-center gap-3 bg-white text-black px-8 py-4 text-sm tracking-widest hover:bg-gray-200 hover:text-black hovesr:bg-gray-200 transition-colors w-full sm:w-1/2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>MAIL</span>
+                </a>
                 
             </div>
         </div>
