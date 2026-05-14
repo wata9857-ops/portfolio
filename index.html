@@ -10,6 +10,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* スクロールを促すミニチュア窓（ページネーション） */
+        #gallery .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px; /* 四角同士の間隔 */
+        }
+        #gallery .swiper-pagination-bullet {
+            width: 24px; /* サムネイル窓の幅 */
+            height: 16px; /* サムネイル窓の高さ（長方形にする） */
+            background-color: #a3a3a3; /* 非アクティブ時の色 */
+            border-radius: 2px; /* ほんの少し角丸 */
+            opacity: 0.4;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        #gallery .swiper-pagination-bullet-active {
+            background-color: #ffffff; /* アクティブ時の色（白） */
+            opacity: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 0 1px #e5e5e5; /* 背景から浮き立たせる */
+            transform: scale(1.15); /* 現在の写真を少しだけ大きく見せる */
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
@@ -68,11 +93,11 @@
                 
                 <div class="swiper-slide !w-auto flex flex-col items-center">
                     <div class="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 w-48 md:w-72 h-32 md:h-48 bg-white opacity-80 blur-[40px] pointer-events-none z-0"></div>
-                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778564996/0T0A1769_avxrrq.jpg" 
+                    <a href="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778802248/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A-1-2_rjyjw5.jpg" 
                        data-pswp-width="4000" data-pswp-height="6000" 
                        class="relative z-10 block transition-transform duration-500 hover:scale-[1.02] bg-[#1a1a1a] p-3 md:p-4 rounded-sm shadow-[15px_25px_40px_rgba(0,0,0,0.3),inset_1.5px_1.5px_2px_rgba(255,255,255,0.15),inset_-2px_-2px_4px_rgba(0,0,0,0.8)] border border-[#111]">
                         <div class="bg-[#faf9f5] p-6 md:p-12 shadow-[inset_4px_4px_8px_rgba(0,0,0,0.15),inset_-1px_-1px_3px_rgba(255,255,255,1)] border border-[#e8e7df]">
-                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1200,q_auto:best,f_auto/v1778564996/0T0A1769_avxrrq.jpg" 
+                            <img src="https://res.cloudinary.com/dshdwliwm/image/upload/h_1920,q_auto:best,f_auto/v1778802248/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A-1-2_rjyjw5.jpg" 
                                  loading="lazy" alt="Gallery Photo 1"
                                  class="h-[380px] md:h-[550px] w-auto object-contain shadow-[1px_1px_3px_rgba(0,0,0,0.5)] border border-[#d4d4d4]">
                         </div>
@@ -174,6 +199,8 @@
 
             <div class="swiper-button-prev !text-gray-400 opacity-40 hover:opacity-100 transition-opacity scale-50 md:scale-75 !left-0 md:!left-6 z-30"></div>
             <div class="swiper-button-next !text-gray-400 opacity-40 hover:opacity-100 transition-opacity scale-50 md:scale-75 !right-0 md:!right-6 z-30"></div>
+
+            <div class="swiper-pagination !relative mt-8 md:mt-12 z-30"></div>
         </div>
     </section>
 
@@ -305,6 +332,10 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, /* クリックでその写真に飛べるようにする */
             },
             breakpoints: {
                 768: {
