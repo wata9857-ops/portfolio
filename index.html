@@ -88,7 +88,7 @@
             <p class="text-xs text-gray-500 tracking-widest mt-4 font-light">EXHIBITION 2026</p>
         </div>
 
-        <div class="swiper mySwiper w-full py-10 pswp-gallery" id="my-gallery">
+        <div class="swiper mySwiper w-full py-10 pb-30 pswp-gallery" id="my-gallery">
             <div class="swiper-wrapper items-center">
                 
                 <div class="swiper-slide !w-auto flex flex-col items-center">
@@ -200,7 +200,7 @@
             <div class="swiper-button-prev !text-gray-400 opacity-40 hover:opacity-100 transition-opacity scale-50 md:scale-75 !left-0 md:!left-6 z-30"></div>
             <div class="swiper-button-next !text-gray-400 opacity-40 hover:opacity-100 transition-opacity scale-50 md:scale-75 !right-0 md:!right-6 z-30"></div>
 
-            <div class="swiper-pagination !relative mt-8 md:mt-12 z-30"></div>
+            <div class="swiper-pagination !relative mt-16 md:mt-24 z-30"></div>
         </div>
     </section>
 
@@ -311,6 +311,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.mySwiper', {
+            initialSlide: 0,
             loop: true,
             loopedSlides: 8,
             grabCursor: true,
